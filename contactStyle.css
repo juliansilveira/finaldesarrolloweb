@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Poppins:wght@500&family=Varela+Round&display=swap');
+
+* {
+  margin     : 0;
+  padding    : 0;
+  box-sizing : border-box;
+  font-family: "poppin", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #4771a3;
+}
+
+/* SECCION HEADER */
+
+.icono {
+  width : 90px;
+  height: 90px;
+}
+
+.contenedor-header {
+  background-color: #333;
+  color           : #fff;
+  padding         : 10px;
+  display         : flex;
+  justify-content : space-between;
+}
+
+nav ul {
+  list-style     : none;
+  margin         : 0;
+  padding        : 0;
+  display        : flex;
+  justify-content: space-evenly;
+  align-items    : center;
+  margin-right   : 2.5em;
+}
+
+nav ul li a {
+  color          : #fff;
+  text-decoration: none;
+  display        : flex;
+  align-items    : center;
+  padding        : .5em;
+}
+
+nav li {
+  padding: 2em;
+}
+
+header nav ul li {
+  font-size: 1.5em;
+}
+
+nav ul li a:hover {
+  background-color: #d62e2e;
+  text-decoration : underline;
+}
+
+/* SECCION FORMULARIO */
+
+.container {
+  display         : flex;
+  flex-direction  : column;
+  width           : 46em;
+  height          : auto;
+  margin          : 8em auto;
+  background-color: #fbfbfb;
+  padding-top     : 1.5em;
+  border-radius   : 5px;
+  padding-bottom  : 2em;
+  padding-left    : 3em;
+}
+
+.container-form label {
+  font-size: 2em;
+}
+
+.container-form input {
+  margin-bottom: 1em;
+  width        : 30em;
+  height       : 2.5em;
+  border-radius: 5px;
+  border-style : solid;
+  border-color : #4771a3;
+  margin-top   : .3em;
+  padding-left: .5em;
+
+}
+
+#coment {
+  width : 30em;
+  height: 9em;
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #4771a3; 
+	margin-top: 10px;  
+	padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+}
+
+label{
+  display: block; 
+	float: center; 	
+}
+
+button{
+  background-color: #4771a3;
+  color: #fbfbfb;
+  font-size: 14px;
+  height: 4em;
+  width: 24.5em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h1{
+  margin: .5em 0;
+}
+
+h3{
+  margin: 1.5em 0;
+}
+
+
+/* SECCION FOOTER */
+
+footer {
+  background-color: #333;
+  color           : #fff;
+  display         : flex;
+  flex-wrap       : wrap;
+  justify-content : space-between;
+  padding         : 20px;
+}
+
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.copy p {
+  text-align      : center;
+  justify-items   : center;
+  background-color: #333;
+  color           : aliceblue;
+}

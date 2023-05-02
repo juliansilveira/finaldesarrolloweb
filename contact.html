@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabajo final de Desarollo web</title>
-    <link rel="stylesheet" href="indexStyle.css">
+    <link rel="stylesheet" href="contactStyle.css">
+    <title>CONTACTO</title>
   </head>
   <body>
     <!-- INICIO HEADER -->
@@ -29,7 +29,7 @@
             </a>
           </li>
           <li>
-            <a href="contact.html">
+            <a href="./contact.html">
               Contacto
             </a>
           </li>
@@ -42,18 +42,41 @@
 
     <!-- FIN HEADER -->
 
-    <!-- INICIO CONTENIDO -->
-    <div class="contenedor-main">
-      <main>
-        <form action="">
-          nombre <input type="text" placeholder="nombre">
-          Apellido <input type="text" placeholder="apellido">
-        </form>
-        contenido
-        <button>enviar</button>
-      </main>
+    <!-- INICIO FORMULARIO -->
+    <div class="container">
+      <h1>FORMULARIO DE CONTACTO</h1>
+      <h3>Llena el formulario para contactarme</h3>
+      <div class="container-form">
+        <p>
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" placeholder="Nombre"
+            required>
+        </p>
+        <p>
+          <label>Apellido</label>
+          <input type="text" id="lastname" name="lastname"
+            placeholder="Apellido" required>
+        </p>
+        <p>
+          <label>Número de Teléfono</label>
+          <input type="tel" id="phone" name="phone"
+            placeholder="Teléfono de Contacto" required>
+        </p>
+        <p>
+          <label>Correo Electrónico</label>
+          <input type="text" id="email" name="email" placeholder="Correo
+            Electrónico" required>
+        </p>
+        <p>
+          <label>Comentario</label>
+          <input type="text" name="coment" id="coment" placeholder="Deja tu
+            comentario...">
+        </p>
+
+        <button type="submit" id="send">Enviar Formulario</button>
+      </div>
     </div>
-    <!-- FIN CONTENIDO -->
+    <!-- FIN FORMULARIO -->
 
     <!-- INICIO FOOTER -->
 
@@ -64,10 +87,10 @@
             <a href="#">Inicio</a>
           </li>
           <li>
-            <a href="./index.html">Jugadores</a>
+            <a href="./jugadores.html">Jugadores</a>
           </li>
           <li>
-            <a href="./contact.html">Contacto</a>
+            <a href="#">Contacto</a>
           </li>
           <li>
             <a href="./info.html">Info</a>
@@ -80,6 +103,5 @@
     </div>
 
     <!-- FIN FOOTER -->
-    <script src="./jss/index.js"></script>
   </body>
 </html>
