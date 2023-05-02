@@ -22,6 +22,7 @@ body {
 
 header {
   background-color: #333;
+
 }
 
 .icono {
@@ -39,6 +40,7 @@ header {
 .cont-nav {
   max-width: 180vh;
   margin   : 0px auto;
+  width: 100%;
 }
 
 nav ul {
