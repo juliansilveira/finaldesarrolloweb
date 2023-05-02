@@ -11,7 +11,18 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  background-color: #4771a3;
+  display         : flex;
+  min-height      : 100vh;
+  flex-direction  : column;
+}
+
 /* SECCION HEADER */
+
+header {
+  background-color: #333;
+}
 
 .icono {
   width : 90px;
@@ -19,62 +30,89 @@ html {
 }
 
 .contenedor-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  display: flex;
+  color          : #fff;
+  padding        : 10px;
+  display        : flex;
   justify-content: space-between;
 }
 
+.cont-nav {
+  max-width: 180vh;
+  margin   : 0px auto;
+}
+
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+  list-style     : none;
+  margin         : 0;
+  padding        : 0;
+  display        : flex;
   justify-content: space-evenly;
-  align-items: center;
-  margin-right: 2.5em;
+  align-items    : center;
+  margin-right   : 2.5em;
 }
 
 nav ul li a {
-  color: #fff;
+  color          : #fff;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  padding: .5em;
+  display        : flex;
+  align-items    : center;
+  padding        : .5em .5em;
 }
 
-nav li{
-  padding: 2em;
+nav li {
+  padding: 2em 2em;
 }
 
-header nav ul li{
+header nav ul li {
   font-size: 1.5em;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
   background-color: #d62e2e;
-  text-decoration: underline;
+  text-decoration : underline;
+  border-radius   : 5px;
 }
+
 
 /* SECCION FOOTER */
 
 footer {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
+  background-color   : #333;
+  color              : #fff;
+  justify-content    : space-between;
+  /* padding         : 20px; */
+  margin-top         : auto;
 }
 
-footer nav ul li a:hover{
+footer nav ul li a:hover {
   text-decoration: underline;
 }
 
-.copy p{
-  text-align: center;
-  justify-items: center;
+.copy p {
+  text-align      : center;
+  justify-items   : center;
   background-color: #333;
-  color: aliceblue;
+  color           : aliceblue;
+  padding         : 1.5em;
+}
+
+footer nav {
+  display        : flex;
+  justify-content: space-between;
+  padding        : 1em;
+}
+
+footer ul {
+  display       : flex;
+  flex-direction: column;
+  margin-top    : 2.5em;
+  margin-left   : 2em;
+}
+
+footer picture {
+  margin-top: 2.5em;
+}
+
+footer nav ul {
+  align-items: start;
 }
