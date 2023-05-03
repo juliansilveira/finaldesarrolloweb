@@ -9,6 +9,7 @@
 
 html {
   font-size: 62.5%;
+
 }
 
 body {
@@ -16,12 +17,16 @@ body {
   display         : flex;
   min-height      : 100vh;
   flex-direction  : column;
+  background-image: url(messias.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* SECCION HEADER */
 
 header {
   background-color: #333;
+  opacity: 75%;
 }
 
 .icono {
@@ -31,7 +36,6 @@ header {
 
 .contenedor-header {
   color          : #fff;
-  padding        : 10px;
   display        : flex;
   justify-content: space-between;
 }
@@ -51,37 +55,32 @@ nav ul {
   margin-right   : 2.5em;
 }
 
-nav ul li a {
-  color          : #fff;
-  text-decoration: none;
-  display        : flex;
-  align-items    : center;
-  padding        : .5em .5em;
-}
-
-nav li {
-  padding: 2em 2em;
+header nav li {
+  margin: 2em 1em;
+  padding: .25em;
 }
 
 header nav ul li {
   font-size: 1.5em;
 }
 
-nav ul li a:hover {
-  background-color: #d62e2e;
+nav ul li:hover {
+  background-color: #2c6b74;
   text-decoration : underline;
   border-radius   : 5px;
+  cursor: pointer;
 }
 
 
 /* SECCION FOOTER */
 
 footer {
-  background-color   : #333;
-  color              : #fff;
-  justify-content    : space-between;
-  /* padding         : 20px; */
-  margin-top         : auto;
+  background-color      : #333;
+  color                 : #fff;
+  /* justify-content    : space-between; */
+  /* padding            : 20px; */
+  margin-top            : auto;
+  opacity: 75%;
 }
 
 footer nav ul li a:hover {
@@ -93,13 +92,14 @@ footer nav ul li a:hover {
   justify-items   : center;
   background-color: #333;
   color           : aliceblue;
-  padding         : 1.5em;
+  padding         : .5em;
+  opacity: 75%;
 }
 
 footer nav {
   display        : flex;
   justify-content: space-between;
-  padding        : 1em;
+  padding-right        : 3em;
 }
 
 footer ul {
@@ -116,3 +116,134 @@ footer picture {
 footer nav ul {
   align-items: start;
 }
+
+/* SECCION FORMULARIO */
+
+.container {
+  display         : flex;
+  flex-direction  : column;
+  width           : 46em;
+  height          : auto;
+  margin          : 8em auto;
+  background-color: #fbfbfb;
+  padding-top     : 1.5em;
+  border-radius   : 5px;
+  padding-bottom  : 2em;
+  padding-left    : 3em;
+  opacity: .95;
+}
+
+.container-form label {
+  font-size: 2em;
+}
+
+.container-form input {
+  margin-bottom: 1em;
+  width        : 30em;
+  height       : 2.5em;
+  border-radius: 5px;
+  border-style : solid;
+  border-color : #4771a3;
+  margin-top   : .3em;
+  padding-left : .5em;
+
+}
+
+#coment {
+  border-radius   : 5px;
+  border-style    : solid;
+  border-width    : 1px;
+  border-color    : #4771a3;
+  margin-top      : 10px;
+  padding-left    : 10px;
+  margin-bottom   : 20px;
+  /* padding-top  : 15px; */
+  width           : 30em;
+  height          : 9em;
+}
+
+label {
+  display: block;
+  float  : center;
+}
+
+.container-form button {
+  background-color: #4771a3;
+  color           : #fbfbfb;
+  font-size       : 15px;
+  height          : 4.5em;
+  width           : 26.5em;
+  border-radius   : 5px;
+  cursor          : pointer;
+}
+
+h1 {
+  margin: .5em 0;
+}
+
+h3 {
+  margin: 1.5em 0;
+}
+
+/* SECCION CONTENIDO JUGADORES */
+
+.container-jugadores {
+  display: flex;
+  flex-direction: column;
+  width           : 90%;
+  height          : auto;
+  margin          : 1em auto;
+  background-color: #fbfbfb;
+  padding-top     : 1.5em;
+  border-radius   : 5px;
+  padding-bottom  : 2em;
+  padding-left    : 3em;
+  max-width: 180vh;
+  opacity: .9;
+}
+
+.tabla{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+td, th{
+  padding: .2em 4em;
+  align-self: flex-start;
+    
+}
+
+table{
+  font-size: 1.3em;
+}
+
+.agregar{
+  position:relative;
+}
+
+/* SECCION INFORMACION */
+
+.container-info{
+  display: flex;
+  flex-direction: column;
+  width           : 90%;
+  height          : auto;
+  margin          : 1em auto;
+  background-color: #fbfbfb;
+  padding-top     : 1.5em;
+  border-radius   : 5px;
+  padding-bottom  : 2em;
+  padding-left    : 3em;
+  max-width: 180vh;
+  opacity: .9;
+}
+
+.container-ifo-dev a{
+  color: #333;
+}
+.container-ifo-dev p{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+

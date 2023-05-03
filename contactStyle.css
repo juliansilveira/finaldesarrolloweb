@@ -22,7 +22,6 @@ body {
 
 header {
   background-color: #333;
-  width: 100%;
 }
 
 .icono {
@@ -32,13 +31,13 @@ header {
 
 .contenedor-header {
   color          : #fff;
-  padding        : 1em;
+  padding        : 10px;
   display        : flex;
   justify-content: space-between;
 }
 
 .cont-nav {
-  max-width: 100%;
+  max-width: 180vh;
   margin   : 0px auto;
 }
 
@@ -73,6 +72,7 @@ nav ul li a:hover {
   text-decoration : underline;
   border-radius   : 5px;
 }
+
 
 /* SECCION FORMULARIO */
 
@@ -126,9 +126,9 @@ label {
 button {
   background-color: #4771a3;
   color           : #fbfbfb;
-  font-size       : 14px;
-  height          : 4em;
-  width           : 90%;
+  font-size       : 15px;
+  height          : 4.5em;
+  width           : 26.5em;
   border-radius   : 5px;
   cursor          : pointer;
 }
@@ -145,11 +145,11 @@ h3 {
 /* SECCION FOOTER */
 
 footer {
-  background-color   : #333;
-  color              : #fff;
-  justify-content    : space-between;
-  /* padding         : 20px; */
-  margin-top         : auto;
+  background-color      : #333;
+  color                 : #fff;
+  /* justify-content    : space-between; */
+  /* padding            : 20px; */
+  margin-top            : auto;
 }
 
 footer nav ul li a:hover {
