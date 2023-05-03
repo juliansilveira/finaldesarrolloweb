@@ -1,4 +1,5 @@
-let contacto = `<!-- INICIO FORMULARIO -->
+let contacto = `
+  <!-- INICIO FORMULARIO -->
   <div class="container">
     <h1>FORMULARIO DE CONTACTO</h1>
     <h3>Llena el formulario para contactarme</h3>
@@ -34,7 +35,8 @@ let contacto = `<!-- INICIO FORMULARIO -->
       <button type="submit" id="send">Enviar Formulario</button>
     </div>
   </div>
-  <!-- FIN FORMULARIO -->`;
+  <!-- FIN FORMULARIO -->
+  `;
 
 let inicio = `<div>
 
@@ -125,7 +127,7 @@ let jugadores =
   `
 
 
-function prueba(variante) {
+function dinamico(variante) {
   document.getElementById("contenido").innerHTML = variante;
 
 }
