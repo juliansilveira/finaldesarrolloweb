@@ -74,8 +74,8 @@ let info = `
       <h3>Desarrollador</h3>
       <p>Julián Silveira Annoni</p>
       <a href="https://github.com/juliansilveira"><span>Github</span></a>
-      <a href="https://github.com/juliansilveira"><span>LinkedIn</span></a>
-      <a href="https://github.com/juliansilveira"><span>Gmail</span></a>
+      <a href="https://www.linkedin.com/in/julian-sa/"><span>LinkedIn</span></a>
+      <span>Gmail: julian.silveira.annoni@gmail.com</span></a>
       </div>
     </div>
   `
