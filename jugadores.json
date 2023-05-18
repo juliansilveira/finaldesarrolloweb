@@ -1,0 +1,238 @@
+{
+  "jugadores": [
+    {
+      "dni": "",
+      "apellido": "Martinez",
+      "nombre": "Emiliano",
+      "posicion": "Arquero",
+      "apodo": "Dibu",
+      "dorsal": "23",
+      "pie": "Derecho"
+    },
+    {
+      "dni": "",
+      "apellido": "Rulli",
+      "nombre": "Gerónimo",
+      "posicion": "Arquero",
+      "apodo": "",
+      "dorsal": "12",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Armani",
+      "nombre": "Franco",
+      "posicion": "Arquero",
+      "apodo": "Pulpo",
+      "dorsal": "1",
+      "pie": "Derecho"
+    },
+    {
+      "dni": "",
+      "apellido": "Molina",
+      "nombre": "Nahuel",
+      "posicion": "Defensa",
+      "apodo": "Galgo",
+      "dorsal": "26",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Montiel",
+      "nombre": "Gonzalo",
+      "posicion": "Defensa",
+      "apodo": "Cachete",
+      "dorsal": "4",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Romero",
+      "nombre": "Cristian",
+      "posicion": "Defensa",
+      "apodo": "Cuti",
+      "dorsal": "13",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Pezzella",
+      "nombre": "Germán",
+      "posicion": "Defensa",
+      "apodo": "",
+      "dorsal": "6",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Otamendi",
+      "nombre": "Nicolás ",
+      "posicion": "Defensa",
+      "apodo": "General",
+      "dorsal": "19",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Martínez",
+      "nombre": "Lisandro",
+      "posicion": "Defensa",
+      "apodo": "Licha",
+      "dorsal": "25",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Acuña",
+      "nombre": "Marcos",
+      "posicion": "Defensa",
+      "apodo": "Huevo",
+      "dorsal": "8",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Tagliafico",
+      "nombre": "Nicolás",
+      "posicion": "Defensa",
+      "apodo": "",
+      "dorsal": "3",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Foyth",
+      "nombre": "Juan",
+      "posicion": "Defensa",
+      "apodo": "",
+      "dorsal": "2",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "De Paul",
+      "nombre": "Rodrigo",
+      "posicion": "Centrocampista",
+      "apodo": "Motorcito",
+      "dorsal": "7",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Paredes",
+      "nombre": "Leandro",
+      "posicion": "Centrocampista",
+      "apodo": "El Heredero",
+      "dorsal": "5",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Mac Allister",
+      "nombre": "Alexis",
+      "posicion": "Centrocampista",
+      "apodo": "",
+      "dorsal": "20",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Rodriguez",
+      "nombre": "Guido",
+      "posicion": "Centrocampista",
+      "apodo": "",
+      "dorsal": "18",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Gómez",
+      "nombre": "Alejandro",
+      "posicion": "Centrocampista",
+      "apodo": "Papu",
+      "dorsal": "17",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Fernández",
+      "nombre": "Enzo",
+      "posicion": "Centrocampista",
+      "apodo": "Gardelito",
+      "dorsal": "24",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Palacios",
+      "nombre": "Exequiel",
+      "posicion": "Centrocampista",
+      "apodo": "Pala",
+      "dorsal": "14",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Almada",
+      "nombre": "Thiago",
+      "posicion": "Centrocampista",
+      "apodo": "",
+      "dorsal": "16",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Di María",
+      "nombre": "Angel",
+      "posicion": "Delantero",
+      "apodo": "Fideo",
+      "dorsal": "11",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Martinez",
+      "nombre": "Lautaro",
+      "posicion": "Delantero",
+      "apodo": "Toro",
+      "dorsal": "22",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Álvarez",
+      "nombre": "Julián",
+      "posicion": "Delantero",
+      "apodo": "Pulga",
+      "dorsal": "9",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Dybala",
+      "nombre": "Paulo",
+      "posicion": "Delantero",
+      "apodo": "La Joya",
+      "dorsal": "21",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Correa",
+      "nombre": "Ángel",
+      "posicion": "Delantero",
+      "apodo": "Angelito",
+      "dorsal": "15",
+      "pie": "Izquierdo"
+    },
+    {
+      "dni": "",
+      "apellido": "Messi",
+      "nombre": "Lionel",
+      "posicion": "Delantero",
+      "apodo": "Pulga",
+      "dorsal": "10",
+      "pie": "Izquierdo"
+    }
+  ]
+}
