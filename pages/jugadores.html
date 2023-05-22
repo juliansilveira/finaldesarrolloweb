@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/jugadoresStyle.css">
-    <title>JUGADORES</title>
-  </head>
-  <body>
-    <!-- INICIO HEADER -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/jugadoresStyle.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- INICIO HEADER -->
 
-    <header>
-      <nav class="contenedor-header">
-        <picture>
-          <a href="#"><img class="icono"
-              src="https://previews.123rf.com/images/redlinevector/redlinevector1704/redlinevector170401035/75153052-matem%C3%A1ticas-icono-simple.jpg"
-              alt=""></a>
-        </picture>
-        <ul>
-          <li>
-            <a href="./index.html">
+  <header>
+    <nav class="contenedor-header cont-nav">
+      <picture>
+        <a href="index.html"><img class="icono"
+            src="https://logodownload.org/wp-content/uploads/2016/11/argentina-national-football-team-logo-0-1.png"
+            alt=""></a>
+      </picture>
+      <ul>
+        <li id="inicio">
+          Inicio
+        </li>
+        <li id="jugadores">
+          Jugadores
+        </li>
+        <li id="contacto">
+          Contacto
+        </li>
+        <li id="info">
+          Info
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- FIN HEADER -->
+
+      <!-- INICIO FOOTER -->
+
+      <footer>
+        <nav class="cont-nav">
+          <ul>
+            <li onclick="dinamico(inicio)">
               Inicio
-            </a>
-          </li>
-          <li>
-            <a href="./jugadores.html">
+            </li>
+            <li onclick="dinamico(jugadores)">
               Jugadores
-            </a>
-          </li>
-          <li>
-            <a href="./contact.html">
+            </li>
+            <li onclick="dinamico(contacto)">
               Contacto
-            </a>
-          </li>
-          <li>
-            <a href="../pages/info.html">Info</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- FIN HEADER -->
-
-    <!-- INICIO FOOTER -->
-
-    <footer>
-      <nav>
-        <ul>
-          <li>
-            <a href="./index.html">Inicio</a>
-          </li>
-          <li>
-            <a href="#">Jugadores</a>
-          </li>
-          <li>
-            <a href="./contact.html">Contacto</a>
-          </li>
-          <li>
-            <a href="./info.html">Info</a>
-          </li>
-        </ul>
-      </nav>
-    </footer>
-    <div class="copy">
-      <p>COPY</p>
-    </div>
-
-    <!-- FIN FOOTER -->
-  </body>
+            </li>
+            <li onclick="dinamico(info)">
+              Info
+            </li>
+          </ul>
+          <picture>
+            <a href="#"><img class="icono"
+                src="https://logodownload.org/wp-content/uploads/2016/11/argentina-national-football-team-logo-0-1.png"
+                alt=""></a>
+          </picture>
+        </nav>
+      </footer>
+      <div class="copy">
+        <p> © 2023 JSA </p>
+      </div>
+  
+      <!-- FIN FOOTER -->
+</body>
 </html>

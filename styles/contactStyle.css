@@ -9,13 +9,25 @@
 
 html {
   font-size: 62.5%;
+
 }
 
 body {
-  background-color: #4771a3;
+  background-color     : #4771a3;
+  display              : flex;
+  min-height           : 100vh;
+  flex-direction       : column;
+  background-image     : url(../img/messias.jpg);
+  background-size      : cover;
+  background-attachment: fixed;
 }
 
 /* SECCION HEADER */
+
+header {
+  background-color: #333;
+  opacity         : 75%;
+}
 
 .icono {
   width : 90px;
@@ -23,11 +35,14 @@ body {
 }
 
 .contenedor-header {
-  background-color: #333;
-  color           : #fff;
-  padding         : 10px;
-  display         : flex;
-  justify-content : space-between;
+  color          : #fff;
+  display        : flex;
+  justify-content: space-between;
+}
+
+.cont-nav {
+  max-width: 180vh;
+  margin   : 0px auto;
 }
 
 nav ul {
@@ -40,25 +55,71 @@ nav ul {
   margin-right   : 2.5em;
 }
 
-nav ul li a {
-  color          : #fff;
-  text-decoration: none;
-  display        : flex;
-  align-items    : center;
-  padding        : .5em;
-}
-
-nav li {
-  padding: 2em;
+header nav li {
+  margin : 2em 1em;
+  padding: .25em;
 }
 
 header nav ul li {
   font-size: 1.5em;
 }
 
-nav ul li a:hover {
-  background-color: #d62e2e;
+header nav ul li a {
+  color: #fff;
+
+}
+
+nav ul li:hover {
+  background-color: #2c6b74;
   text-decoration : underline;
+  border-radius   : 5px;
+  cursor          : pointer;
+}
+
+
+/* SECCION FOOTER */
+
+footer {
+  background-color      : #333;
+  color                 : #fff;
+  /* justify-content    : space-between; */
+  /* padding            : 20px; */
+  margin-top            : auto;
+  opacity               : 75%;
+}
+
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.copy p {
+  text-align      : center;
+  justify-items   : center;
+  background-color: #333;
+  color           : aliceblue;
+  padding         : .5em;
+  opacity         : 75%;
+}
+
+footer nav {
+  display        : flex;
+  justify-content: space-between;
+  padding-right  : 3em;
+}
+
+footer ul {
+  display       : flex;
+  flex-direction: column;
+  margin-top    : 2.5em;
+  margin-left   : 2em;
+}
+
+footer picture {
+  margin-top: 2.5em;
+}
+
+footer nav ul {
+  align-items: start;
 }
 
 /* SECCION FORMULARIO */
@@ -74,6 +135,7 @@ nav ul li a:hover {
   border-radius   : 5px;
   padding-bottom  : 2em;
   padding-left    : 3em;
+  opacity         : .95;
 }
 
 .container-form label {
@@ -88,65 +150,42 @@ nav ul li a:hover {
   border-style : solid;
   border-color : #4771a3;
   margin-top   : .3em;
-  padding-left: .5em;
+  padding-left : .5em;
 
 }
 
 #coment {
-  width : 30em;
-  height: 9em;
-	border-radius: 5px;  
-	border-style: solid; 
-	border-width: 1px; 
-	border-color: #4771a3; 
-	margin-top: 10px;  
-	padding-left: 10px;
-  margin-bottom: 20px; 
-  padding-top: 15px; 
+  border-radius   : 5px;
+  border-style    : solid;
+  border-width    : 1px;
+  border-color    : #4771a3;
+  margin-top      : 10px;
+  padding-left    : 10px;
+  margin-bottom   : 20px;
+  /* padding-top  : 15px; */
+  width           : 30em;
+  height          : 9em;
 }
 
-label{
-  display: block; 
-	float: center; 	
+label {
+  display: block;
+  float  : center;
 }
 
-button{
+.container-form button {
   background-color: #4771a3;
-  color: #fbfbfb;
-  font-size: 14px;
-  height: 4em;
-  width: 24.5em;
-  border-radius: 5px;
-  cursor: pointer;
+  color           : #fbfbfb;
+  font-size       : 15px;
+  height          : 4.5em;
+  width           : 95%;
+  border-radius   : 5px;
+  cursor          : pointer;
 }
 
-h1{
+h1 {
   margin: .5em 0;
 }
 
-h3{
+h3 {
   margin: 1.5em 0;
-}
-
-
-/* SECCION FOOTER */
-
-footer {
-  background-color: #333;
-  color           : #fff;
-  display         : flex;
-  flex-wrap       : wrap;
-  justify-content : space-between;
-  padding         : 20px;
-}
-
-footer nav ul li a:hover {
-  text-decoration: underline;
-}
-
-.copy p {
-  text-align      : center;
-  justify-items   : center;
-  background-color: #333;
-  color           : aliceblue;
 }
