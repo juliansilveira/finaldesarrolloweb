@@ -1,70 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles/jugadoresStyle.css">
-  <title>Document</title>
-</head>
-<body>
-  <!-- INICIO HEADER -->
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/jugadoresStyle.css">
+    <title>Jugadores</title>
+  </head>
+  <body>
+    <!-- INICIO HEADER -->
 
-  <header>
-    <nav class="contenedor-header cont-nav">
-      <picture>
-        <a href="index.html"><img class="icono"
-            src="https://logodownload.org/wp-content/uploads/2016/11/argentina-national-football-team-logo-0-1.png"
-            alt=""></a>
-      </picture>
-      <ul>
-        <li id="inicio">
-          Inicio
-        </li>
-        <li id="jugadores">
-          Jugadores
-        </li>
-        <li id="contacto">
-          Contacto
-        </li>
-        <li id="info">
-          Info
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+      <nav class="contenedor-header cont-nav">
+        <picture>
+          <a href="index.html"><img class="icono"
+              src="https://logodownload.org/wp-content/uploads/2016/11/argentina-national-football-team-logo-0-1.png"
+              alt></a>
+        </picture>
+        <ul>
+          <li id="inicio"><a href="./index.html">Inicio</a>
+          </li>
+          <li id="jugadores"><a href="#">Jugadores</a>
+          </li>
+          <li id="contacto"><a href="./contact.html">Contacto</a>
+          </li>
+          <li id="info"><a href="./info.html">Info</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- FIN HEADER -->
+    <!-- FIN HEADER -->
 
-      <!-- INICIO FOOTER -->
-
-      <footer>
-        <nav class="cont-nav">
-          <ul>
-            <li onclick="dinamico(inicio)">
-              Inicio
-            </li>
-            <li onclick="dinamico(jugadores)">
-              Jugadores
-            </li>
-            <li onclick="dinamico(contacto)">
-              Contacto
-            </li>
-            <li onclick="dinamico(info)">
-              Info
-            </li>
-          </ul>
-          <picture>
-            <a href="#"><img class="icono"
-                src="https://logodownload.org/wp-content/uploads/2016/11/argentina-national-football-team-logo-0-1.png"
-                alt=""></a>
-          </picture>
-        </nav>
-      </footer>
-      <div class="copy">
-        <p> © 2023 JSA </p>
+    <!-- INICIO CONTENIDO JUGADORES -->
+    <main>
+      <div class="container-jugadores tabla">
+        <table>
+          <th>DNI</th><th>Apellido</th><th>Nombre</th><th>Posicion</th><th>Apodo</th><th>Dorsal</th><th>Pie
+            Dominante</th>
+        </table>
       </div>
-  
-      <!-- FIN FOOTER -->
-</body>
+      <div class="jugadores-seleccionados">
+        <h1>Jugadores seleccionados</h1>
+        <table class="selectos">
+          <th>Dorsal</th> <th>Posicion</th> <th>Nombre</th> <th>Apellido</th>
+        </table>
+      </div>
+    </main>
+    <!-- FIN CONTENIDO JUGADORES -->
+
+    <!-- INICIO FOOTER -->
+    <footer>
+      <nav class="cont-nav">
+        <ul>
+          <li>
+            <a href="#">Inicio</a>
+          </li>
+          <li>
+            <a href="./jugadores.html">Jugadores</a>
+          </li>
+          <li><a href="./contact.html">Contacto</a>
+          </li>
+          <li> <a href="./info.html">Info</a>
+          </li>
+        </ul>
+        <picture>
+          <a href="#"><img class="icono"
+              src="https://logodownload.org/wp-content/uploads/2016/11/argentina-national-football-team-logo-0-1.png"
+              alt></a>
+        </picture>
+      </nav>
+    </footer>
+    <div class="copy">
+      <p> © 2023 JSA </p>
+    </div>
+    <!-- FIN FOOTER -->
+    <script src="../jss/jugadores.js"></script>
+  </body>
 </html>

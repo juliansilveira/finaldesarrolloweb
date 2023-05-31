@@ -13,13 +13,14 @@ html {
 }
 
 body {
-  background-color     : #4771a3;
-  display              : flex;
-  min-height           : 100vh;
-  flex-direction       : column;
-  background-image     : url(../img/messias.jpg);
-  background-size      : cover;
-  background-attachment: fixed;
+  background-color        : #4771a3;
+  display                 : flex;
+  min-height              : 100vh;
+  flex-direction          : column;
+  background-image        : url(../img/messias.jpg);
+  background-size         : cover;
+  background-attachment   : fixed;
+  /* max-width            : 200vh; */
 }
 
 /* SECCION HEADER */
@@ -122,6 +123,9 @@ footer nav ul {
   align-items: start;
 }
 
+footer nav ul li a {
+  color: #fff;
+}
 
 /* SECCION CONTENIDO JUGADORES */
 
@@ -135,8 +139,8 @@ footer nav ul {
   padding-top     : 1.5em;
   border-radius   : 5px;
   padding-bottom  : 2em;
-  padding-left    : 3em;
-  max-width       : 180vh;
+  padding-left    : 1.5em;
+  max-width       : 105vh;
   opacity         : .9;
 }
 
@@ -147,8 +151,9 @@ footer nav ul {
 }
 
 td,
-th {
-  padding   : .2em 4em;
+th,
+tr {
+  padding   : .1em 1em;
   align-self: flex-start;
 
 }
@@ -161,3 +166,28 @@ table {
   position: relative;
 }
 
+main {
+  display        : flex;
+  justify-content: center;
+  /* align-items    : center; */
+}
+
+.jugadores-seleccionados {
+  display              : flex;
+  flex-direction       : column;
+  width                : 50em;
+  height               : auto;
+  margin               : 1em auto;
+  background-color     : #fbfbfb;
+  padding-top          : 1.5em;
+  border-radius        : 5px;
+  padding-bottom       : 2em;
+  padding-left         : 2em;
+  /*max-width          : 105vh;*/
+  opacity              : .9;
+  margin-left          : 2em;
+}
+
+p .selectos{
+  display: grid;
+}

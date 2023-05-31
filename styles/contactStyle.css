@@ -122,6 +122,10 @@ footer nav ul {
   align-items: start;
 }
 
+footer nav ul li a {
+  color: #fff;
+}
+
 /* SECCION FORMULARIO */
 
 .container {
@@ -177,7 +181,7 @@ label {
   color           : #fbfbfb;
   font-size       : 15px;
   height          : 4.5em;
-  width           : 95%;
+  width           : 26.5em;
   border-radius   : 5px;
   cursor          : pointer;
 }
