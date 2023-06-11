@@ -6,6 +6,72 @@ if (seleccionadosGuardados && Array.isArray(seleccionadosGuardados)) {
   seleccionados = seleccionadosGuardados;
 }
 
+// Obtener referencias a elementos del DOM
+const formularioConvocatoria = document.querySelector('.formulario-convocatoria');
+const fechaInput = document.getElementById('fecha');
+const rivalInput = document.getElementById('rival');
+const capitanInput = document.getElementById('capitan');
+const listaConvocatorias = document.getElementById('listaConvocatorias');
+
+// Array para almacenar las convocatorias
+let convocatorias = [];
+
+// Crear convocatoria
+function crearConvocatoria() {
+  const fecha = fechaInput.value;
+  const rival = rivalInput.value;
+  const capitan = capitanInput.value;
+
+  if (fecha && rival && capitan) {
+    const convocatoria = {
+      fecha,
+      rival,
+      capitan,
+      jugadores: [], // Array para almacenar los jugadores seleccionados en esta convocatoria
+    };
+
+    convocatorias.push(convocatoria);
+    actualizarListaConvocatorias();
+
+    // Reiniciar el formulario
+    fechaInput.value = '';
+    rivalInput.value = '';
+    capitanInput.value = '';
+
+    // Verificar si hay 11 jugadores seleccionados
+    if (convocatoria.jugadores.length === 11) {
+      vaciarListaSeleccionados();
+    }
+  }
+}
+// Vaciar la lista de seleccionados
+function vaciarListaSeleccionados() {
+  listaSeleccionados.innerHTML = '';
+}
+// Actualizar la lista de convocatorias en el DOM
+function actualizarListaConvocatorias() {
+  listaConvocatorias.innerHTML = '';
+
+  convocatorias.forEach((convocatoria, index) => {
+    const li = document.createElement('li');
+    li.textContent = `Fecha: ${convocatoria.fecha}, Rival: ${convocatoria.rival}, Capitán: ${convocatoria.capitan}`;
+    li.addEventListener('click', () => {
+      console.log('Convocatoria seleccionada:', convocatoria);
+      // Aquí puedes agregar la lógica para mostrar los jugadores seleccionados en esta convocatoria
+    });
+    listaConvocatorias.appendChild(li);
+  });
+}
+
+// Event listener para el botón "Crear Convocatoria"
+const botonCrearConvocatoria = document.getElementById('crearConvocatoria');
+botonCrearConvocatoria.addEventListener('click', crearConvocatoria);
+
+// Guardar las convocatorias en el LocalStorage al cerrar la página
+window.addEventListener('beforeunload', () => {
+  localStorage.setItem('convocatorias', JSON.stringify(convocatorias));
+});
+
 fetch('../jugadores.json')
   .then((res) => res.json())
   .then((data) => {

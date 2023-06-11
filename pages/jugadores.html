@@ -40,11 +40,33 @@
             Dominante</th>
         </table>
       </div>
+      
       <div class="jugadores-seleccionados">
         <h1>Jugadores seleccionados</h1>
         <table class="selectos">
           <th>Dorsal</th> <th>Posicion</th> <th>Nombre</th> <th>Apellido</th>
         </table>
+      </div>
+      
+      <div class="convocatorias">
+        <h1>Convocatorias</h1>
+        <div class="formulario-convocatoria">
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha">
+    
+          <label for="rival">Rival:</label>
+          <input type="text" id="rival">
+    
+          <label for="capitan">Capitán:</label>
+          <input type="text" id="capitan">
+    
+          <button id="crearConvocatoria">Crear Convocatoria</button>
+        </div>
+    
+        <div class="listado-convocatorias">
+          <h2>Listado de Convocatorias</h2>
+          <ul id="listaConvocatorias"></ul>
+        </div>
       </div>
     </main>
     <!-- FIN CONTENIDO JUGADORES -->
