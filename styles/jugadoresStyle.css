@@ -225,3 +225,12 @@ p .selectos{
   cursor: pointer;
   margin-bottom: 5px;
 }
+
+.contenedor-crear-nuevo{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contenedor-crear-nuevo input{
+  max-width: 80vh;
+}

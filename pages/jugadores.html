@@ -36,33 +36,44 @@
     <main>
       <div class="container-jugadores tabla">
         <table>
+          <div class="contenedor-crear-nuevo">
+              <input type="text" placeholder="Dni" id="dninuevo">
+              <input type="text" placeholder="Apellido" id="apellidonuevo">
+              <input type="text" placeholder="Nombre" id="nombrenuevo">
+              <input type="text" placeholder="Posicion" id="posicionnuevo">
+              <input type="text" placeholder="Apodo" id="apodonuevo">
+              <input type="text" placeholder="Dorsal" id="dorsalnuevo">
+              <input type="text" placeholder="Pie Dominante" id="piedominantenuevo">
+              <button class="crearNuevo">Crear nuevo</button>
+
+          </div>
           <th>DNI</th><th>Apellido</th><th>Nombre</th><th>Posicion</th><th>Apodo</th><th>Dorsal</th><th>Pie
             Dominante</th>
         </table>
       </div>
-      
+
       <div class="jugadores-seleccionados">
-        <h1>Jugadores seleccionados</h1>
+        <h1>Jugadores Titulares</h1>
         <table class="selectos">
           <th>Dorsal</th> <th>Posicion</th> <th>Nombre</th> <th>Apellido</th>
         </table>
       </div>
-      
+
       <div class="convocatorias">
         <h1>Convocatorias</h1>
         <div class="formulario-convocatoria">
           <label for="fecha">Fecha:</label>
           <input type="date" id="fecha">
-    
+
           <label for="rival">Rival:</label>
           <input type="text" id="rival">
-    
+
           <label for="capitan">Capitán:</label>
           <input type="text" id="capitan">
-    
+
           <button id="crearConvocatoria">Crear Convocatoria</button>
         </div>
-    
+
         <div class="listado-convocatorias">
           <h2>Listado de Convocatorias</h2>
           <ul id="listaConvocatorias"></ul>
@@ -97,6 +108,8 @@
       <p> © 2023 JSA </p>
     </div>
     <!-- FIN FOOTER -->
-    <script src="../jss/jugadores.js"></script>
+    <script src="../jss/cargarjugadores.js"></script>
+    <script src="../jss/jugadoresv2.js"></script>
+    <!-- <script src="../jss/jugadores.js"></script> -->
   </body>
 </html>

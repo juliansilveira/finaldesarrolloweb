@@ -1,5 +1,6 @@
 let seleccionados = [];
 
+
 // Recuperar los datos de jugadores seleccionados del LocalStorage
 const seleccionadosGuardados = JSON.parse(localStorage.getItem('seleccionados'));
 if (seleccionadosGuardados && Array.isArray(seleccionadosGuardados)) {
@@ -12,6 +13,7 @@ const fechaInput = document.getElementById('fecha');
 const rivalInput = document.getElementById('rival');
 const capitanInput = document.getElementById('capitan');
 const listaConvocatorias = document.getElementById('listaConvocatorias');
+const listaSeleccionados = document.getElementById('listaSeleccionados');
 
 // Array para almacenar las convocatorias
 let convocatorias = [];
@@ -42,12 +44,17 @@ function crearConvocatoria() {
     if (convocatoria.jugadores.length === 11) {
       vaciarListaSeleccionados();
     }
+
+    // Guardar las convocatorias en el LocalStorage
+    localStorage.setItem('convocatorias', JSON.stringify(convocatorias));
   }
 }
+
 // Vaciar la lista de seleccionados
 function vaciarListaSeleccionados() {
   listaSeleccionados.innerHTML = '';
 }
+
 // Actualizar la lista de convocatorias en el DOM
 function actualizarListaConvocatorias() {
   listaConvocatorias.innerHTML = '';
@@ -58,8 +65,20 @@ function actualizarListaConvocatorias() {
     li.addEventListener('click', () => {
       console.log('Convocatoria seleccionada:', convocatoria);
       // Aquí puedes agregar la lógica para mostrar los jugadores seleccionados en esta convocatoria
+      cargarJugadoresSeleccionados(convocatoria.jugadores);
     });
     listaConvocatorias.appendChild(li);
+  });
+}
+
+// Cargar jugadores seleccionados en el DOM
+function cargarJugadoresSeleccionados(jugadores) {
+  listaSeleccionados.innerHTML = '';
+
+  jugadores.forEach((jugador) => {
+    const li = document.createElement('li');
+    li.textContent = jugador;
+    listaSeleccionados.appendChild(li);
   });
 }
 
@@ -113,7 +132,6 @@ fetch('../jugadores.json')
       filaDeJugadores.appendChild(pieJugador);
 
       let tabla = document.querySelector('table');
-
       tabla.appendChild(filaDeJugadores);
 
       let botonEditar = document.createElement('button');
@@ -126,7 +144,25 @@ fetch('../jugadores.json')
       botonSeleccionar.innerText = 'Seleccionar';
 
       botonEditar.addEventListener('click', () => {
-        console.log('Editado', jugador.nombre);
+        const apellido = prompt('Ingrese el nuevo apellido:', jugador.apellido);
+        const nombre = prompt('Ingrese el nuevo nombre:', jugador.nombre);
+        const posicion = prompt('Ingrese la nueva posición:', jugador.posicion);
+        const apodo = prompt('Ingrese el nuevo apodo:', jugador.apodo);
+        const dorsal = prompt('Ingrese el nuevo dorsal:', jugador.dorsal);
+        const pieDominante = prompt('Ingrese el nuevo pie dominante:', jugador.pieDominante);
+
+        if (apellido && nombre && posicion && apodo && dorsal && pieDominante) {
+          // Actualizar los datos del jugador
+          jugador.apellido = apellido;
+          jugador.nombre = nombre;
+          jugador.posicion = posicion;
+          jugador.apodo = apodo;
+          jugador.dorsal = dorsal;
+          jugador.pieDominante = pieDominante;
+
+          // Guardar los datos actualizados en el archivo JSON
+          guardarDatosEnJSON();
+        }
       });
 
       botonSeleccionar.addEventListener('click', () => {
@@ -161,7 +197,6 @@ fetch('../jugadores.json')
           btnEliminarSeleccionado.innerText = 'X';
 
           btnEliminarSeleccionado.addEventListener('click', () => {
-
             const indice = seleccionados.indexOf(jugador.nombre);
             if (indice !== -1) {
               seleccionados.splice(indice, 1);
@@ -227,6 +262,55 @@ fetch('../jugadores.json')
   .catch((error) => {
     console.error('Error al leer el archivo JSON:', error);
   });
- //todo se agrego la funcionalindad de que verifica que haya un arquero y sean hasta un máximo de 11 jugadores
 
- //todo falta agregar la funcion de editar jugador y agregar jugadores nuevos a la lista
+let botonCrearNuevo = document.querySelector('.crearNuevo')
+
+
+botonCrearNuevo.addEventListener('click', () => {
+  const nuevoJugador = {
+    apellido: document.querySelector('#apellidonuevo'),
+    nombre: document.querySelector('#nombrenuevo'),
+    posicion: document.querySelector('#posicionnuevo'),
+    apodo: document.querySelector('#apodonuevo'),
+    dorsal: document.querySelector('#dorsalnuevo'),
+    pieDominante: document.querySelector('#piedominantenuevo'),
+  };
+  if (nuevoJugador.apellido && nuevoJugador.nombre && nuevoJugador.posicion && nuevoJugador.apodo && nuevoJugador.dorsal && nuevoJugador.pieDominante) {
+    fetch('../jugadores.json')
+      .then((res) => res.json())
+      .then((data) => {
+        const { jugadores } = data;
+        jugadores.push(nuevoJugador);
+
+        // guardarDatosEnJSON(jugadores);
+      })
+      .catch((error) => {
+        console.error('Error al leer el archivo JSON:', error);
+      });
+  } else {
+    alert('Debe completar todos los campos del nuevo jugador.');
+  }
+})
+
+
+//funcion para guardar los datos en el json
+// function guardarDatosEnJSON(jugadores) {
+//   const datosActualizados = {
+//     jugadores: jugadores,
+//   };
+
+//   fetch('../jugadores.json', {
+//     method: 'PUT',
+//     body: JSON.stringify(datosActualizados),
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   })
+//     .then((res) => res.json())
+//     .then((data) => {
+//       console.log('Datos actualizados:', data);
+//     })
+//     .catch((error) => {
+//       console.error('Error al guardar los datos en el archivo JSON:', error);
+//     });
+// }
