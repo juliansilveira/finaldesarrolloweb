@@ -52,6 +52,65 @@ if (jugadoresGuardados) {
     filaDeJugadores.appendChild(botonEditar);
     botonEditar.innerText = 'Editar';
 
+    botonEditar.addEventListener('click', () => {
+      formularioEditar = document.querySelector('#formulario');
+      formularioEditar.style.display = 'block';
+
+      // Obtener el DNI del jugador seleccionado
+      const dniJugadorSeleccionado = dniJugador.textContent;
+
+      // Rellenar el formulario de edición con los datos actuales del jugador
+      const jugadorSeleccionado = jugadores.find(jugador => jugador.dni === dniJugadorSeleccionado);
+      if (jugadorSeleccionado) {
+        document.querySelector('#nuevoDni').value = jugadorSeleccionado.dni;
+        document.querySelector('#nuevoApellido').value = jugadorSeleccionado.apellido;
+        document.querySelector('#nuevoNombre').value = jugadorSeleccionado.nombre;
+        document.querySelector('#nuevoPosicion').value = jugadorSeleccionado.posicion;
+        document.querySelector('#nuevoApodo').value = jugadorSeleccionado.apodo;
+        document.querySelector('#nuevoDorsal').value = jugadorSeleccionado.dorsal;
+        document.querySelector('#nuevoPie').value = jugadorSeleccionado.pie;
+      }
+
+      btnGuardar.addEventListener('click', () => {
+        nuevoDni = document.querySelector('#nuevoDni').value;
+        nuevoApellido = document.querySelector('#nuevoApellido').value;
+        nuevoNombre = document.querySelector('#nuevoNombre').value;
+        nuevoPosicion = document.querySelector('#nuevoPosicion').value;
+        nuevoApodo = document.querySelector('#nuevoApodo').value;
+        nuevoDorsal = document.querySelector('#nuevoDorsal').value;
+        nuevoPie = document.querySelector('#nuevoPie').value;
+
+        // Encontrar el índice del jugador en el array 'jugadores'
+        const indiceJugador = jugadores.findIndex(jugador => jugador.dni === dniJugadorSeleccionado);
+
+        if (indiceJugador !== -1) {
+          // Actualizar los valores del jugador
+          jugadores[indiceJugador].apellido = nuevoApellido;
+          jugadores[indiceJugador].nombre = nuevoNombre;
+          jugadores[indiceJugador].posicion = nuevoPosicion;
+          jugadores[indiceJugador].apodo = nuevoApodo;
+          jugadores[indiceJugador].dorsal = nuevoDorsal;
+          jugadores[indiceJugador].pie = nuevoPie;
+
+          // Guardar el array 'jugadores' actualizado en el localStorage
+          localStorage.setItem('jugadores', JSON.stringify(jugadores));
+
+          // Actualizar la fila del jugador en la tabla
+          apellidoJugador.textContent = nuevoApellido;
+          nombreJugador.textContent = nuevoNombre;
+          posicionJugador.textContent = nuevoPosicion;
+          apodoJugador.textContent = nuevoApodo;
+          dorsalJugador.textContent = nuevoDorsal;
+          pieJugador.textContent = nuevoPie;
+
+          // Ocultar el formulario de edición
+          formularioEditar.style.display = 'none';
+        }
+      });
+    });
+
+    //Boton Seleccionar
+
     filaDeJugadores.appendChild(botonSeleccionar);
     botonSeleccionar.innerText = 'Seleccionar';
 
@@ -128,66 +187,101 @@ if (convocatoriasGuardadas) {
   convocatorias.forEach(convocatoria => {
     const convocatoriaItem = document.createElement('li');
     const btnconvocatoria = document.createElement('button')
+    const btnEditarConvocatoria = document.createElement('button')
+
     btnconvocatoria.classList.add('btnconvocatoria')
     btnconvocatoria.innerText = 'Mostrar'
+    btnEditarConvocatoria.innerText = 'Editar'
+    btnEditarConvocatoria.id = 'btnEditarConvocatoria'
+
     convocatoriaItem.textContent = `Fecha: ${convocatoria.fecha}, Rival: ${convocatoria.rival}, Capitán: ${convocatoria.capitan}`;
 
-// Agregar evento de clic al botón "btnconvocatoria"
-btnconvocatoria.addEventListener('click', () => {
-  // Obtener la posición de la convocatoria en el array 'convocatorias'
-  const posicionConvocatoria = Array.from(listaConvocatorias.children).indexOf(convocatoriaItem);
+    // Agregar evento de clic al botón "btnconvocatoria"
+    btnconvocatoria.addEventListener('click', () => {
+      // Obtener la posición de la convocatoria en el array 'convocatorias'
+      const posicionConvocatoria = Array.from(listaConvocatorias.children).indexOf(convocatoriaItem);
 
-  // Verificar si la posición es válida
-  if (posicionConvocatoria >= 0) {
-    // Obtener la lista de jugadores de la convocatoria seleccionada
-    const jugadoresConvocatoria = convocatorias[posicionConvocatoria].jugadores;
+      // Verificar si la posición es válida
+      if (posicionConvocatoria >= 0) {
+        // Obtener la lista de jugadores de la convocatoria seleccionada
+        const jugadoresConvocatoria = convocatorias[posicionConvocatoria].jugadores;
 
-    // Limpiar la lista de jugadores seleccionados
-    selectoss.innerHTML = '';
+        // Limpiar la lista de jugadores seleccionados
+        selectoss.innerHTML = '';
 
-    // Mostrar los jugadores de la convocatoria seleccionada
-    jugadoresConvocatoria.forEach(jugador => {
-      const jugadorItem = document.createElement('li');
-      jugadorItem.textContent = `${jugador.apellido}, ${jugador.nombre}, (${jugador.posicion})`;
-      
-      const btnEliminarJugador = document.createElement('button');
-      btnEliminarJugador.classList.add('btnEliminarJugador')
-      btnEliminarJugador.innerText = ' x ';
-      jugadorItem.appendChild(btnEliminarJugador);
+        // Mostrar los jugadores de la convocatoria seleccionada
+        jugadoresConvocatoria.forEach(jugador => {
+          const jugadorItem = document.createElement('li');
+          jugadorItem.textContent = `${jugador.apellido}, ${jugador.nombre}, (${jugador.posicion})`;
 
-      btnEliminarJugador.addEventListener('click', () => {
-        quitarJugadorDeSeleccion(jugador);
-      });
+          const btnEliminarJugador = document.createElement('button');
+          btnEliminarJugador.classList.add('btnEliminarJugador')
+          btnEliminarJugador.innerText = ' x ';
+          jugadorItem.appendChild(btnEliminarJugador);
 
-      selectoss.appendChild(jugadorItem);
+          btnEliminarJugador.addEventListener('click', () => {
+            quitarJugadorDeSeleccion(jugador);
+          });
+
+          selectoss.appendChild(jugadorItem);
+        });
+      }
     });
-  }
-});
 
-// Función para quitar un jugador de la selección
-function quitarJugadorDeSeleccion(jugador) {
-  const posicionConvocatoria = Array.from(listaConvocatorias.children).indexOf(convocatoriaItem);
-  
-  if (posicionConvocatoria >= 0) {
-    const jugadoresConvocatoria = convocatorias[posicionConvocatoria].jugadores;
-    const indiceJugador = jugadoresConvocatoria.findIndex(j => j.dni === jugador.dni);
-    
-    if (indiceJugador >= 0) {
-      jugadoresConvocatoria.splice(indiceJugador, 1);
-      localStorage.setItem('convocatorias', JSON.stringify(convocatorias));
-      
-      // Actualizar la lista de jugadores seleccionados en el DOM
-      btnconvocatoria.click();
+    // Función para quitar un jugador de la selección
+    function quitarJugadorDeSeleccion(jugador) {
+      const posicionConvocatoria = Array.from(listaConvocatorias.children).indexOf(convocatoriaItem);
+
+      if (posicionConvocatoria >= 0) {
+        const jugadoresConvocatoria = convocatorias[posicionConvocatoria].jugadores;
+        const indiceJugador = jugadoresConvocatoria.findIndex(j => j.dni === jugador.dni);
+
+        if (indiceJugador >= 0) {
+          jugadoresConvocatoria.splice(indiceJugador, 1);
+          localStorage.setItem('convocatorias', JSON.stringify(convocatorias));
+
+          // Actualizar la lista de jugadores seleccionados en el DOM
+          btnconvocatoria.click();
+        }
+      }
     }
-  }
-}
+
+
 
 
 
     convocatoriaItem.appendChild(btnconvocatoria);
     listaConvocatorias.appendChild(convocatoriaItem);
+    convocatoriaItem.appendChild(btnEditarConvocatoria);
   });
 }
+
+let btnEditarConvocatoria = document.querySelector('#btnEditarConvocatoria')
+btnEditarConvocatoria.addEventListener('click', () => {
+  let datosconvocatoria = document.querySelector('#formularioEditarDatosConvocatoria');
+  datosconvocatoria.style.display = 'block';
+
+
+  const btnGuardarNuevosDatosConvocatoria = document.querySelector('#guardarNuevosDatosConvocatoria');
+
+  btnGuardarNuevosDatosConvocatoria.addEventListener('click', () => {
+    const nuevaFecha = document.querySelector('#nuevafecha').value;
+    const nuevoRival = document.querySelector('#nuevoRival').value;
+    const nuevoCapitan = document.querySelector('#nuevoCapitan').value;
+    // Actualizar los datos en el local storage
+    localStorage.setItem('fecha', nuevaFecha);
+    localStorage.setItem('rival', nuevoRival);
+    localStorage.setItem('capitan', nuevoCapitan);
+
+    // Actualizar los datos en el formulario
+    document.querySelector('#fecha').textContent = nuevaFecha;
+    document.querySelector('#rival').textContent = nuevoRival;
+    document.querySelector('#capitan').textContent = nuevoCapitan;
+
+    // Ocultar el formulario nuevamente
+    datosconvocatoria.style.display = 'none';
+  });
+});
 
 // Agregar evento de clic al botón "Crear Convocatoria"
 crearConvocatoriaBtn.addEventListener('click', () => {
@@ -222,12 +316,14 @@ crearConvocatoriaBtn.addEventListener('click', () => {
   rivalInput.value = '';
   capitanInput.value = '';
   selectoss.innerText = '';
-  
+
 
   // Limpiar la lista de jugadores seleccionados
   seleccionados = [];
   localStorage.removeItem('seleccionados');
 });
+
+
 
 function mostrarJugadoresSeleccionados() {
   const filaSeleccionados = document.querySelector('.selectos');
@@ -437,7 +533,7 @@ function filtrarJugadores() {
 
     // Mostrar la fila si todos los filtros coinciden, o si no se ingresó ningún valor en algún filtro
     if ((nombreCoincide || filtroNombre === '') && (apellidoCoincide || filtroApellido === '') &&
-        (dorsalCoincide || filtroDorsal === '') && (posicionCoincide || filtroPosicion === '')) {
+      (dorsalCoincide || filtroDorsal === '') && (posicionCoincide || filtroPosicion === '')) {
       fila.style.display = '';
     } else {
       fila.style.display = 'none'; // Ocultar la fila si no coincide con los filtros

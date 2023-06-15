@@ -55,9 +55,23 @@
             <button>filtrar</button>
           </div>
 
+          <div id="formulario" style="display: none;">
+            <h3>Nuevos datos a editar</h3>
+            <input type="text" id="nuevoDni" placeholder="Nuevo DNI">
+            <input type="text" id="nuevoApellido" placeholder="Nuevo Apellido">
+            <input type="text" id="nuevoNombre" placeholder="Nuevo Nombre">
+            <input type="text" id="nuevoPosicion" placeholder="Nuevo posicion">
+            <input type="text" id="nuevoApodo" placeholder="Nuevo Apodo">
+            <input type="text" id="nuevoDorsal" placeholder="Nuevo Dorsal">
+            <input type="text" id="nuevoPie" placeholder="Nuevo Pie Dominante">
+
+            <button id="btnGuardar">Guardar</button>
+          </div>
+          
+
           <th>DNI</th><th>Apellido</th><th>Nombre</th><th>Posicion</th><th>Apodo</th><th>Dorsal</th><th>Pie
             Dominante</th>
-            
+
         </table>
       </div>
 
@@ -86,6 +100,16 @@
         <div class="listado-convocatorias">
           <h2>Listado de Convocatorias</h2>
           <ul id="listaConvocatorias"></ul>
+
+          <div id="formularioEditarDatosConvocatoria" style="display : none">
+            <h4>Editar datos Convocatoria</h4>
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="nuevafecha">
+          <input type="text" id="nuevoRival" placeholder="Rival">
+          <input type="text" id="nuevoCapitan" placeholder="Capitan">
+          <button id="guardarNuevosDatosConvocatoria">Guardar</button>
+        </div>
+
         </div>
       </div>
     </main>
